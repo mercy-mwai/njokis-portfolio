@@ -1,18 +1,17 @@
-import Provider from "@/components/Provider";
 import Nav from "@/components/Nav";
+import "../styles/global.css";
+
 
 const RootLayout = ({ children }) => {
     return (
       <html lang="en">
         <body>
-          <Provider>
-          <div >
+          <div>
             <div  />
           </div>
           <main >
             <Nav />
             {children}</main>
-            </Provider>
         </body>
       </html>
     );
