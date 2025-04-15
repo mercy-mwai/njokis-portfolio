@@ -8,28 +8,6 @@ const Nav = () => {
   const pathname = usePathname();
 
   return (
-    // <div> 
-    //   <nav className="flex-between w-full mb-16 pt-3">
-    //     <ul className="hidden md:flex space-x-4">
-    //       <li><Link href="/">Home</Link></li>
-    //       <li><Link href="/about">About</Link></li>
-    //       <li><Link href="/projects">Projects</Link></li>
-    //       <li><Link href="/contact">Contact</Link></li>
-    //     </ul>
-    //   </nav>
-
-    //   {toggleDropdown && (
-    //     <div className="absolute top-16 right-4 bg-gray-800 text-white rounded shadow-lg p-4 md:hidden">
-    //       <ul className="space-y-2">
-    //         <li><Link href="/">Home</Link></li>
-    //         <li><Link href="/about">About</Link></li>
-    //         <li><Link href="/projects">Projects</Link></li>
-    //         <li><Link href="/contact">Contact</Link></li>
-    //       </ul>
-    //     </div>
-    //   )}
-    // </div>
-
     <nav className="flex justify-between items-center w-full mb-16 pt-3">
       {/** desktop Navigation*/}
       <div className="sm:hidden flex">
@@ -40,6 +18,25 @@ const Nav = () => {
         <Link href='/contact' className={`black_btn ${pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
       </div>
       </div>
+      {/* Mobile Toggle Button */}
+      <div className="sm:hidden flex items-center">
+        <button
+          onClick={() => setToggleDropdown(!toggleDropdown)}
+          className="text-white focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {toggleDropdown && (
+        <div className="absolute top-16 right-5 bg-gray-800 rounded-lg p-4 flex flex-col gap-3 z-50 sm:hidden">
+          <Link href='/' onClick={() => setToggleDropdown(false)} className={`text-white ${pathname === '/' ? 'font-bold' : ''}`}>Home</Link>
+          <Link href='/about' onClick={() => setToggleDropdown(false)} className={`text-white ${pathname === '/about' ? 'font-bold' : ''}`}>About</Link>
+          <Link href='/projects' onClick={() => setToggleDropdown(false)} className={`text-white ${pathname === '/projects' ? 'font-bold' : ''}`}>Projects</Link>
+          <Link href='/contact' onClick={() => setToggleDropdown(false)} className={`text-white ${pathname === '/contact' ? 'font-bold' : ''}`}>Contact</Link>
+        </div>
+      )}
 
     </nav>
   )
