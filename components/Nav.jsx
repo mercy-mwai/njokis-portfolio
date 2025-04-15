@@ -2,10 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+
   return (
     <div>Nav</div>
   )
