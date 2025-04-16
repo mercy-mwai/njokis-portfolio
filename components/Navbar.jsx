@@ -1,228 +1,94 @@
-// "use client";
-// import Link from "next/link";
-// import { useState } from "react";
-// import { usePathname } from "next/navigation";
-
-// const Nav = () => {
-//   const [isClick, setIsClick] = useState(false);
-//   const pathname = usePathname();
-
-//   const toggleNavbar = () => {
-//     setIsClick(!isClick);
-//   }
-
-//   return (
-//     <nav className="absolute top-0 left-0 w-full p-1 z-20 bg-opacity-30 backdrop-blur-md border-b border-white/10">
-//   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//     <div className="flex items-center justify-between h-16">
-//       <div className="flex items-center">
-//         <div className="flex-shrink-0">
-//           <Link href="/" className="text-white text-2xl font-bold">
-//             NM.
-//           </Link>
-//         </div>
-//       </div>
-//       <div className="hidden md:block">
-//         <div className="ml-4 flex items-center space-x-4">
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2 "
-//           >
-//             Home
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//            About
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//            Projects
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//           Contact
-//           </Link>
-//         </div>
-//       </div>
-
-//         <div className="md:hidden flex items-center">
-//             <button className="flex-inline items-center justify-center p-2 rounded-md text-white md:text-white
-//             hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-//             onClick={toggleNavbar}
-//             >
-//                 {
-//                     isClick?(
-//                         <svg  className="h-6 w-6"
-//                   xmlns="http://www.w3.org/2000/svg"
-//                   fill="none"
-//                   viewBox="0 0 24 24"
-//                   stroke="currentColor" >
-//                   <path
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth={2}
-//                     d="M6 18L18 6M6 6l12 12"/>
-//                     </svg>
-//                     ):(
-//                         <svg  className="h-6 w-6"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                         fill="none"
-//                         viewBox="0 0 24 24"
-//                         stroke="currentColor">
-//                         <path
-//                           strokeLinecap="round"
-//                           strokeLinejoin="round"
-//                           strokeWidth={2}
-//                           d="M4 6h16M4 12h16m-7 6h7"/>
-//                      </svg>
-//                     )
-//                 }
-//             </button>
-//         </div>
-//     </div>
-//   </div>
-  
-//   <div className="md:hidden">
-//     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
-//     <Link href="/" className="text-white block text-2xl font-bold">
-//             NM.
-//           </Link>
-//         </div>
-//       </div>
-//       <div className="hidden md:block">
-//         <div className="ml-4 flex items-center space-x-4">
-//           <Link 
-//             href="/" 
-//             className="text-white block hover:bg-amber hover:text-black rounded-lg p-2 "
-//           >
-//             Home
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//            About
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//            Projects
-//           </Link>
-//           <Link 
-//             href="/" 
-//             className="text-white hover:bg-amber hover:text-black rounded-lg p-2"
-//           >
-//           Contact
-//           </Link>
-//     </div>
-//   </div>
-// </nav>
-
-//   );
-// };
-
-// export default Nav;
 "use client";
-import Link from "next/link";
+
 import { useState } from "react";
+import Link from "next/link";
 
 const Nav = () => {
-  const [isClick, setIsClick] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    console.log("Button clicked");
-    setIsClick(!isClick);
+  const toggleMenu = () => {
+    console.log("Menu toggled!");
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full p-1 z-20 bg-opacity-30 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-white text-2xl font-bold">
-              NM.
-            </Link>
-          </div>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link href="/" className="text-white text-2xl font-bold">
+          NM.
+        </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex ml-4 items-center space-x-4">
-            {["Home", "About", "Projects", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href="/"
-                className="text-white hover:bg-amber hover:text-black rounded-lg p-2 transition duration-300"
+        {/* Desktop menu */}
+        <div className="hidden md:flex space-x-6">
+          <NavLink href="/" label="Home" />
+          <NavLink href="/about" label="About" />
+          <NavLink href="/projects" label="Projects" />
+          <NavLink href="/contact" label="Contact" />
+        </div>
+
+        {/* Mobile button */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none focus:ring-2 focus:ring-white p-2 rounded"
+          >
+            {isOpen ? (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {item}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Nav Toggle Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              className="p-2 rounded-md text-white focus:outline-none"
-              onClick={toggleNavbar}
-            >
-              {isClick ? (
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Nav Dropdown */}
-      {isClick && (
-        <div className="md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {["Home", "About", "Projects", "Contact"].map((item) => (
-            <Link
-              key={item}
-              href="/"
-              className="block text-white hover:bg-amber hover:text-black rounded-lg p-2 transition duration-300"
-            >
-              {item}
-            </Link>
-          ))}
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-black/80 backdrop-blur-sm border-t border-white/10">
+          <div className="px-4 py-4 flex flex-col space-y-4">
+            <NavLink href="/" label="Home" onClick={() => setIsOpen(false)} />
+            <NavLink href="/about" label="About" onClick={() => setIsOpen(false)} />
+            <NavLink href="/projects" label="Projects" onClick={() => setIsOpen(false)} />
+            <NavLink href="/contact" label="Contact" onClick={() => setIsOpen(false)} />
+          </div>
         </div>
       )}
     </nav>
   );
 };
+
+const NavLink = ({ href, label, onClick }) => (
+  <Link
+    href={href}
+    onClick={onClick}
+    className="text-white hover:bg-purple-600 hover:text-white rounded-lg px-3 py-2 text-lg transition duration-300"
+  >
+    {label}
+  </Link>
+);
 
 export default Nav;
