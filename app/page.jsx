@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const Home = () => {
   return (
     <div className="h-screen overflow-y-scroll">
-      <section className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] relative w-full">
+      <section className="bg-[url('/assets/images/image.png')] bg-cover bg-center min-h-[250vh] relative w-full">
         {/* Content */}
 
         <div className="relative z-20 text-white pt-60 px-16">
