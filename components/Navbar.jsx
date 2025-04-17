@@ -85,7 +85,7 @@ const NavLink = ({ href, label, onClick }) => (
   <Link
     href={href}
     onClick={onClick}
-    className="text-white hover:bg-purple-600 hover:text-white rounded-lg px-3 py-2 text-lg transition duration-300"
+    className="text-white hover:bg-purple-900 hover:text-white rounded-lg px-3 py-2 text-lg transition duration-300"
   >
     {label}
   </Link>
