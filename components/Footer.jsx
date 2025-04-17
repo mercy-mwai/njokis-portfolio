@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="text-black p-6 bg-white/10  backdrop-blur-md border-b border-white/20">
+    <footer className="absolute  bottom-0 left-0 w-full text-white p-3 bg-white/10  backdrop-blur-md border-b border-white/20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         
         {/* Left content */}
@@ -24,7 +24,7 @@ const Footer = () => {
           <a href="https://x.com/NjokiiMwai" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition duration-300">
             <FaTwitter size={22} />
           </a>
-          <a href="mercyneemam@gmail.com" className="hover:text-purple-400 transition duration-300">
+          <a href="/" className="hover:text-purple-400 transition duration-300">
             <FaEnvelope size={22} />
           </a>
         </div>
