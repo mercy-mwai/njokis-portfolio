@@ -1,5 +1,6 @@
 "use client";
 import { Typewriter } from "react-simple-typewriter";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         />
            </p>
         </div>
+        <Footer />
       </section>
     </div>
   );
