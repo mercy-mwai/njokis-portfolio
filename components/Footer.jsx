@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className=" glass-footer text-white p-6">
+    <footer className="text-black p-6 bg-white/10  backdrop-blur-md border-b border-white/20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         
         {/* Left content */}
@@ -35,6 +35,7 @@ const Footer = () => {
         </p>
         
       </div>
+      
     </footer>
   );
 };
