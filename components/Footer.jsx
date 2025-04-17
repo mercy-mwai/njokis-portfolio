@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="absolute  bottom-0 left-0 w-full text-white p-3 bg-white/10  backdrop-blur-md border-b border-white/20">
+    <footer className="absolute bottom-0 left-0 w-full text-white p-3 bg-white/3  backdrop-blur-md border-b border-white/20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         
         {/* Left content */}
