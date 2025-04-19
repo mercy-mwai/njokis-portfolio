@@ -1,8 +1,6 @@
 import Nav from "@/components/Navbar";
 import "../styles/globals.css";
 import {Space_Grotesk} from "next/font/google";
-import Footer from "@/components/Footer";
-
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -19,6 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body  className={`${spaceGrotesk.variable}` +"flex flex-col min-h-screen"}>
         <main className="flex-grow">
+          <div className="h-screen overflow-y-scroll">
+         <div className="fixed inset-0 bg-[url('/assets/images/banner.png')] bg-cover bg-center -z-10"></div>
+          </div>
+       
           <Nav />
         {children}
         

@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 const Home = () => {
   return (
     <div className="h-screen overflow-y-scroll">
-      <section className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] relative w-full">
+      {/* <section className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] relative w-full"> */}
         {/* Content */}
-
+<section>
         <div className="relative z-20 text-white pt-60 px-16">
           <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">Hi there
             <span role="img" aria-label="waving hand">👋🏽</span>
