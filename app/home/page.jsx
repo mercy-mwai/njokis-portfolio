@@ -1,19 +1,15 @@
 "use client"
+import Banner from "@/components/Banner";
 import { useRouter } from "next/navigation"
 
-// const Home = () => {
+const Home = () => {
 
-//   const router = useRouter();
-//   return (
-//     <div className='flex row'>
-//       <div className='cols'>
-        
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Home
-export default function AboutPage() {
-  return <div className="text-white p-4">About Page</div>;
+  const router = useRouter();
+  return (
+    <div >
+     <Banner />
+    </div>
+  )
 }
+
+export default Home
