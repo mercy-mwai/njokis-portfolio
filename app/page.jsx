@@ -1,23 +1,69 @@
+// "use client";
+// import { Typewriter } from "react-simple-typewriter";
+// import Footer from "@/components/Footer";
+// import Banner from "@/components/Banner";
+
+// const Home = () => {
+//   return (
+//     <div>
+     
+//       {/* Content */}
+//       <div className="relative z-20 text-white pt-60 px-16">
+//         <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
+//           Hi there{" "}
+//           <span role="img" aria-label="waving hand">
+//             👋🏽
+//           </span>
+//         </h1>
+//         <h1 className="text-[2.5em] pl-14">
+//           I'M{" "}
+//           <strong className="main-name text-purple-300">NJOKI MWAI</strong>
+//         </h1>
+//         <p className="mt-4 text-[2.0em] text-left pl-14 text-purple-300">
+//           <Typewriter
+//             words={[
+//               "Software Developer 👩🏽‍💻",
+//               "Lifelong Learner 🚀",
+//               "Welcome to my portfolio ✨",
+//               "Let's build something amazing 🚀",
+//             ]}
+//             loop={0}
+//             cursor
+//             cursorStyle="_"
+//             typeSpeed={70}
+//             deleteSpeed={50}
+//             delaySpeed={1000}
+//           />
+//         </p>
+        
+//       </div>
+//       <Footer />
+//       <Banner />
+//     </div>
+//   );
+// };
+
+// export default Home;
 "use client";
 import { Typewriter } from "react-simple-typewriter";
 import Footer from "@/components/Footer";
-import Banner from "@/components/Banner";
+import Nav from "@/components/Navbar";
 
 const Home = () => {
   return (
-    <div>
-      <Banner />
+    <div className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] w-full relative">
+      {/* Nav */}
+      <Nav />
+
       {/* Content */}
       <div className="relative z-20 text-white pt-60 px-16">
         <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
           Hi there{" "}
-          <span role="img" aria-label="waving hand">
-            👋🏽
-          </span>
+          <span role="img" aria-label="waving hand">👋🏽</span>
         </h1>
         <h1 className="text-[2.5em] pl-14">
           I'M{" "}
-          <strong className="main-name text-purple-300">NJOKI MWAI</strong>
+          <strong className="text-purple-300">NJOKI MWAI</strong>
         </h1>
         <p className="mt-4 text-[2.0em] text-left pl-14 text-purple-300">
           <Typewriter
@@ -25,7 +71,7 @@ const Home = () => {
               "Software Developer 👩🏽‍💻",
               "Lifelong Learner 🚀",
               "Welcome to my portfolio ✨",
-              "Let's build something amazing 🚀",
+              "Let's build something amazing 🚀"
             ]}
             loop={0}
             cursor
@@ -35,8 +81,9 @@ const Home = () => {
             delaySpeed={1000}
           />
         </p>
-        
       </div>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

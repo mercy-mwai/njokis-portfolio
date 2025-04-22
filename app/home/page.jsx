@@ -7,7 +7,7 @@ const Home = () => {
   const router = useRouter();
   return (
     <div >
-     <Banner />
+    
     </div>
   )
 }
