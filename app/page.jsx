@@ -14,11 +14,12 @@ const Home = () => {
       <div className="relative z-20 text-white pt-60 px-16">
         <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
           Hi there{" "}
-          <span role="img" aria-label="waving hand">👋🏽</span>
+          <span role="img" aria-label="waving hand">
+            👋🏽
+          </span>
         </h1>
         <h1 className="text-[2.5em] pl-14">
-          I'M{" "}
-          <strong className="text-purple-300">NJOKI MWAI</strong>
+          I'M <strong className="text-purple-300">NJOKI MWAI</strong>
         </h1>
         <p className="mt-4 text-[2.0em] text-left pl-14 text-purple-300">
           <Typewriter
@@ -26,7 +27,7 @@ const Home = () => {
               "Software Developer 👩🏽‍💻",
               "Lifelong Learner 🚀",
               "Welcome to my portfolio ✨",
-              "Let's build something amazing 🚀"
+              "Let's build something amazing 🚀",
             ]}
             loop={0}
             cursor
@@ -37,22 +38,37 @@ const Home = () => {
           />
         </p>
       </div>
+      
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 pt-20 px-8 m-6">
+        {/* Image Section */}
+        <div>
+          <Image
+            src="/assets/images/Njoki.jpeg"
+            alt="Njoki Mwai"
+            width={250}
+            height={250}
+            className="rounded-full border-4 border-purple-600"
+          />
+        </div>
 
-      {/* Image */}
-      <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center">
-        <Image
-          src="/assets/images/Njoki.jpeg"
-          alt="Njoki Mwai"
-          width={200}
-          height={200}
-          className="rounded-full"
-        />
+        {/* Bio Text Section */}
+        <div className="text-white max-w-xl text-center md:text-left">
+          <h1 className="text-4xl font-bold mb-4">Hi, I'm Njoki Mwai 👋🏽</h1>
+          <p className="text-lg mb-4">
+            I’m a passionate{" "}
+            <span className="text-purple-400">Software Developer 👩🏽‍💻</span> and a
+            lifelong learner 🚀. Welcome to my portfolio — let’s build something
+            amazing together!
+          </p>
+          <button className="mt-4 bg-purple-600 hover:bg-purple-800 text-white px-6 py-2 rounded-lg transition">
+            View My Projects
+          </button>
+        </div>
       </div>
 
       {/* Footer */}
       <Footer />
     </section>
-  
   );
 };
 
