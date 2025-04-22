@@ -2,10 +2,11 @@
 import { Typewriter } from "react-simple-typewriter";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
+import Image from "next/image";
 
 const Home = () => {
   return (
-    <div className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] w-full relative">
+    <section className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[250vh] w-full relative">
       {/* Nav */}
       <Nav />
 
@@ -37,9 +38,20 @@ const Home = () => {
         </p>
       </div>
 
+      {/* Image */}
+      <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center">
+        <Image
+          src="/assets/images/Njoki.jpeg"
+          alt="Njoki Mwai"
+          width={200}
+          height={200}
+          className="rounded-full"
+        />
+      </div>
+
       {/* Footer */}
       <Footer />
-    </div>
+    </section>
   
   );
 };
