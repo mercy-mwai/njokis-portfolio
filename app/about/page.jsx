@@ -33,6 +33,14 @@ const AboutSection = () => {
             </span>
             <br />
             <br />
+            Beyond development, I’m also skilled in version control with 
+            <strong> Git andGitHub,</strong> ensuring clean collaboration and code management across teams. 
+            For deployment, I’m familiar with 
+            <strong> Vercel, Netlify, and Render</strong>, 
+              and I’ve worked with Linux-based servers, CI/CD pipelines,
+            and tools like Docker for containerization.
+            <br />
+            <br />
             What drives me is <strong>solving real-world problems</strong> with
             clean, scalable code and ensuring everything runs smoothly under the
             hood. I thrive in
@@ -50,7 +58,7 @@ const AboutSection = () => {
         </div>
 
         {/* Image Banner */}
-        <div className="md:w-1/3 flex justify-center">
+        <div className="md:w-1/3 flex justify-center mt-50">
           <Tilt>
             <Image
               src="/assets/images/Njoki.jpeg"
