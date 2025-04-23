@@ -41,9 +41,9 @@ const Home = () => {
 
       {/* Image */}
 
-      <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 pt-20 px-16">
+      <div className="flex justify-end px-16 pt-20 mt-30">
         {/* Image Section */}
-        <div>
+        <div className="flex flex-col items-center text-white text-left space-y-6">
           <Image
             src="/assets/images/Njoki.jpeg"
             alt="Njoki Mwai"
