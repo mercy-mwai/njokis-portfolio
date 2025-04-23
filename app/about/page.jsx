@@ -1,5 +1,6 @@
 "use client";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
@@ -9,56 +10,38 @@ const AboutSection = () => {
       className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10"
       id="about"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         {/* Text Banner */}
-        <div className="md:w-2/3 mt-40 ml-30">
-          <h1 className="text-4xl font-bold mb-4 text-white">
+        <div className="w-full md:w-2/3 mt-20 md:mt-40 text-center md:text-left px-2 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
             LET ME <span className="text-purple-400">INTRODUCE</span> MYSELF
           </h1>
-          <p className="text-lg leading-relaxed mb-4 text-white">
+          <p className="text-base sm:text-lg leading-relaxed mb-4 text-white">
             Hey there! I'm Njoki Mwai, a dedicated{" "}
-            <strong>Full-Stack Developer</strong> with a strong passion for
-            building powerful and efficient backend systems that bring ideas to
-            life.
+            <strong>Full-Stack Developer</strong> who enjoys building strong and
+            efficient backend systems that turn ideas into real products.
             <br />
-            <br />
-            While I enjoy working across the stack—from creating responsive
-            frontends with React and Next.js to crafting solid APIs—my true
-            strength lies in backend development. I love diving into
-            <strong> server-side logic, database management,</strong>
-            and ensuring seamless performance behind the scenes. I'm confident
-            with technologies like
+            <br />I enjoy working across the stack—from responsive UIs with{" "}
+            <strong>React and Next.js</strong> to robust backends with
             <span className="text-purple-400 font-semibold">
-              Node.js, Express, MongoDB, MySQL, and RESTful APIs.
+              {" "}
+              Node.js, Express, MongoDB, and MySQL
             </span>
+            .
             <br />
             <br />
-            Beyond development, I’m also skilled in version control with 
-            <strong> Git andGitHub,</strong> ensuring clean collaboration and code management across teams. 
-            For deployment, I’m familiar with 
-            <strong> Vercel, Netlify, and Render</strong>, 
-              and I’ve worked with Linux-based servers, CI/CD pipelines,
-            and tools like Docker for containerization.
+            I'm skilled in <strong>Git & GitHub</strong> for collaboration and
+            use tools like
+            <strong> Vercel, Netlify, and Render</strong> for deployment.
             <br />
-            <br />
-            What drives me is <strong>solving real-world problems</strong> with
-            clean, scalable code and ensuring everything runs smoothly under the
-            hood. I thrive in
-            <strong>
-              collaborative environments, continuously learning and pushing
-              myself to build better, faster, and smarter.
-            </strong>
-            <br />
-            <br />
-            When I'm not coding, you can find me exploring new tech trends,
-            contributing to open-source projects, or enjoying a good book. I'm
-            always eager to connect with fellow developers and share knowledge,
-            so feel free to reach out!
+            <br />I love <strong>solving real-world problems</strong> with
+            clean, scalable code and enjoy working in teams that push me to grow
+            and build better.
           </p>
         </div>
 
         {/* Image Banner */}
-        <div className="md:w-1/3 flex justify-center mt-50">
+        <div className="md:w-1/3 flex justify-center md:justify-end md:mt-50">
           <Tilt>
             <Image
               src="/assets/images/Njoki.jpeg"
@@ -70,6 +53,105 @@ const AboutSection = () => {
           </Tilt>
         </div>
       </div>
+
+      <div className="mt-5">
+        <p className="text-center text-white mt-50 text-3xl">
+          PROFESSIONAL SKILLSET
+        </p>
+        <div className="flex justify-center flex-wrap gap-8 mt-6">
+          <Image
+            src="/assets/icons/html.svg"
+            alt="HTML"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/css.svg"
+            alt="CSS"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/tailwind.svg"
+            alt="Tailwind CSS"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/javascript.svg"
+            alt="JavaScript"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/react.svg"
+            alt="React"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/nextjs.svg"
+            alt="Next.js"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/node-js.svg"
+            alt="Node.js"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/Express JS.svg"
+            alt="Express.js"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/mongodb.svg"
+            alt="MongoDB"
+            width={50}
+            height={50}
+          />
+          <Image
+            src="/assets/icons/mysql.svg"
+            alt="MySQL"
+            width={50}
+            height={50}
+            />
+          <Image
+            src="/assets/icons/restapi.png"
+            alt="Rest API"
+            width={50}
+            height={50}
+            />
+          <Image
+            src="/assets/icons/python.svg"
+            alt="Python"
+            width={50}
+            height={50}
+            />
+          <Image
+            src="/assets/icons/firebase.svg"
+            alt="Python"
+            width={50}
+            height={50}
+            />
+          <Image
+            src="/assets/icons/git.svg"
+            alt="Python"
+            width={50}
+            height={50}
+            />
+          <Image
+            src="/assets/icons/github.svg"
+            alt="Python"
+            width={50}
+            height={50}
+            />
+        </div>
+      </div>
+      <Footer />
     </Banner>
   );
 };
