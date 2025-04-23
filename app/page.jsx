@@ -39,31 +39,6 @@ const Home = () => {
         </p>
       </div>
 
-      {/* Image */}
-
-      <div className="flex justify-end px-16 pt-20 mt-30">
-        {/* Image Section */}
-        <div className="flex flex-col items-center text-white text-left space-y-6">
-          <Image
-            src="/assets/images/Njoki.jpeg"
-            alt="Njoki Mwai"
-            width={250}
-            height={250}
-            className="rounded-full border-4 border-purple-600"
-          />
-        </div>
-
-        {/* Text Section */}
-        <div className="max-w-md text-white text-left md:pl-14">
-          <h2 className="text-3xl font-bold mb-4">Who am I?</h2>
-          <p className="text-lg leading-relaxed">
-            I’m Njoki Mwai, a passionate Software Developer 👩🏽‍💻 who loves solving
-            problems and learning continuously. I specialize in building dynamic
-            and responsive web applications. Welcome to my digital world!
-          </p>
-        </div>
-      </div>
-
       {/* Footer */}
       <Footer />
     </section>
