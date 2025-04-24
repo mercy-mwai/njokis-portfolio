@@ -7,7 +7,7 @@ import Tilt from "react-parallax-tilt";
 const AboutSection = () => {
   return (
     <Banner
-      className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10"
+      className="bg-black/10 text-white px-6 py-16 md:px-20 mt-60"
       id="about"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
@@ -282,7 +282,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <Footer />
+     
     </Banner>
   );
 };

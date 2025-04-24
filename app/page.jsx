@@ -2,16 +2,19 @@
 import { Typewriter } from "react-simple-typewriter";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
-import Image from "next/image";
+import AboutSection from "./about/page";
+import Contact from "./contact/page";
+import Banner from "@/components/Banner";
+
 
 const Home = () => {
   return (
-    <section className="bg-[url('/assets/images/banner.png')] bg-cover bg-center min-h-[200vh] w-full relative">
+    <Banner>
       {/* Nav */}
       <Nav />
 
       {/* Content */}
-      <div className="relative z-20 text-white pt-60 px-16">
+      <div className="relative z-20 text-white pt-20 sm:pt-24 md:pt-32 lg:pt-60 px-6 sm:px-10 md:px-20">
         <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
           Hi there{" "}
           <span role="img" aria-label="waving hand">
@@ -38,10 +41,15 @@ const Home = () => {
           />
         </p>
       </div>
+      {/*AboutSection*/}
+      <AboutSection />
+
+      {/* Contact Section */}
+      <Contact />
 
       {/* Footer */}
-      <Footer />
-    </section>
+     <Footer />
+    </Banner>
   );
 };
 
