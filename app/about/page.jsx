@@ -55,11 +55,11 @@ const AboutSection = () => {
       </div>
 
       <div className="mt-5">
-        <p className="text-center text-white mt-50 text-3xl">
+        <p className="text-center text-white mt-30 text-3xl">
           PROFESSIONAL SKILLSET
         </p>
-        <div className="flex justify-center flex-wrap gap-8 mt-6">
-          <Image
+        {/* <div className="flex justify-center flex-wrap gap-8 mt-6">
+        <Image
             src="/assets/icons/html.svg"
             alt="HTML"
             width={50}
@@ -149,6 +149,137 @@ const AboutSection = () => {
             width={50}
             height={50}
             />
+        </div> */}
+        <div className="text-center mt-10">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Technical Skills
+          </h2>
+
+          {/* Frontend */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-purple-400 mb-4">
+              Frontend
+            </h3>
+            <div className="flex justify-center flex-wrap gap-6">
+              <Image
+                src="/assets/icons/html.svg"
+                alt="HTML"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/css.svg"
+                alt="CSS"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/tailwind.svg"
+                alt="Tailwind CSS"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/javascript.svg"
+                alt="JavaScript"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/react.svg"
+                alt="React"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/nextjs.svg"
+                alt="Next.js"
+                width={50}
+                height={50}
+              />
+            </div>
+          </div>
+
+          {/* Backend */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-purple-400 mb-4">
+              Backend
+            </h3>
+            <div className="flex justify-center flex-wrap gap-6">
+              <Image
+                src="/assets/icons/node-js.svg"
+                alt="Node.js"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/Express JS.svg"
+                alt="Express.js"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/restapi.png"
+                alt="REST API"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/python.svg"
+                alt="Python"
+                width={50}
+                height={50}
+              />
+            </div>
+          </div>
+
+          {/* Database */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-purple-400 mb-4">
+              Databases
+            </h3>
+            <div className="flex justify-center flex-wrap gap-6">
+              <Image
+                src="/assets/icons/mongodb.svg"
+                alt="MongoDB"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/mysql.svg"
+                alt="MySQL"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/firebase.svg"
+                alt="Firebase"
+                width={50}
+                height={50}
+              />
+            </div>
+          </div>
+
+          {/* Tools */}
+          <div>
+            <h3 className="text-xl font-semibold text-purple-400 mb-4">
+              Tools
+            </h3>
+            <div className="flex justify-center flex-wrap gap-6">
+              <Image
+                src="/assets/icons/git.svg"
+                alt="Git"
+                width={50}
+                height={50}
+              />
+              <Image
+                src="/assets/icons/github.svg"
+                alt="GitHub"
+                width={50}
+                height={50}
+              />
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
