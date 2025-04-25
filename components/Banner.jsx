@@ -1,3 +1,4 @@
+import react from 'React'
 
 const Banner = ({children}) => {
     return (

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
 import AboutSection from "./about/page";
 import Contact from "./contact/page";
+import Project from "./project/page";
 import Banner from "@/components/Banner";
 
 
@@ -46,6 +47,8 @@ const Home = () => {
 
       {/* Contact Section */}
       <Contact />
+
+      <Projects />
 
       {/* Footer */}
      <Footer />
