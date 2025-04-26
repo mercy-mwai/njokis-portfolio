@@ -10,6 +10,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   title: "Njoki's Portfolio",
   description: "Welcome to my portfolio!",
+  icons: {
+    icon: "/assets/icons/favicon.png", // Path inside your /public folder
+  },
 };
 
 export default function RootLayout({ children }) {
