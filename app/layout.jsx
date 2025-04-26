@@ -11,7 +11,7 @@ export const metadata = {
   title: "Njoki's Portfolio",
   description: "Welcome to my portfolio!",
   icons: {
-    icon: "/assets/icons/favicon.png", // Path inside your /public folder
+    icon: "/assets/icons/favicon.png", 
   },
 };
 
