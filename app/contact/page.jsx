@@ -7,8 +7,19 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import { useState } from "react";
+
 
 const Contact = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000); 
+  };
   return (
     <Banner className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10">
       <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center pt-20">
@@ -85,11 +96,19 @@ const Contact = () => {
             />
             <button
               type="submit"
+              onClick={handleSubmit}
               className="w-full bg-purple-500 hover:bg-purple-600 transform hover:scale-105 transition duration-300 text-white font-semibold py-2 rounded-md"
             >
               Send Message
             </button>
           </form>
+           {/* Success Popup */}
+           {showPopup && (
+            <div className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md text-center animate-bounce">
+              ✅ Message sent successfully!
+            </div>
+          )}
+
         </div>
       </div>
     </Banner>
