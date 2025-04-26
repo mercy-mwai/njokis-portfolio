@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="https://github.com/mercy-mwai" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition duration-300">
             <FaGithub size={22} />
           </a>
-          <a href="https://www.linkedin.com/in/mercy-mwaii" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition duration-300">
+          <a href="https://www.linkedin.com/in/mercy-mwai-aa7214279/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition duration-300">
             <FaLinkedin size={22} />
           </a>
           <a href="https://x.com/NjokiiMwai" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition duration-300">
