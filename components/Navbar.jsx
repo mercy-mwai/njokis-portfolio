@@ -23,6 +23,7 @@ const Nav = () => {
         <div className="hidden md:flex space-x-6">
           <NavLink href="/" label="Home" />
           <NavLink href="/about" label="About" />
+          <NavLink href="/skills" label="Skills" />
           <NavLink href="/projects" label="Projects" />
           <NavLink href="/contact" label="Contact" />
         </div>
@@ -72,6 +73,7 @@ const Nav = () => {
           <div className="px-4 py-4 flex flex-col space-y-4">
             <NavLink href="/" label="Home" onClick={() => setIsOpen(false)} />
             <NavLink href="/about" label="About" onClick={() => setIsOpen(false)} />
+            <NavLink href="/skills" label="Skills" onClick={() => setIsOpen(false)} />
             <NavLink href="/projects" label="Projects" onClick={() => setIsOpen(false)} />
             <NavLink href="/contact" label="Contact" onClick={() => setIsOpen(false)} />
           </div>

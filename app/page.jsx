@@ -41,15 +41,15 @@ const Home = () => {
             delaySpeed={1000}
           />
         </p>
+        
       </div>
       {/*AboutSection*/}
       <AboutSection />
 
+      {/* Projects Section */}
+      <Projects />
       {/* Contact Section */}
       <Contact />
-
-      <Projects />
-
       {/* Footer */}
      <Footer />
     </Banner>

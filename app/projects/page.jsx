@@ -13,9 +13,9 @@ const Projects = () => {
     {
       title: "Promptopia",
       description: "A promptopia built with Next.js,MongoDB,Tailwind CSS.",
-      image: "/assets/images/project1.png",
+      image: "/assets/images/promptopia.png",
       github: "https://github.com/mercy-mwai/promptopia-2",
-      demo: "https://promptopia-2-ten.vercel.app/",
+      demo: "https://promptopia-2-seven.vercel.app/",
     },
     {
       title: "E-commerce App",
@@ -42,17 +42,17 @@ const Projects = () => {
 
   return (
     <Banner className="py-20">
-      <h1 className="font-bold text-3xl pt-30 text-gray-300 text-center">
-        A small section of {""}
-        <span className="text-purple-400 text-4xl">My Recent Projects</span>
+      <h1 className="font-bold text-4xl pt-30 text-gray-300 text-center hover:text-amber-400">
+        A SMALL SECTION OF {""}
+        <span className="text-purple-400 text-4xl">MY RECENT PROJECTS</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 p-4 rounded-lg shadow-lg">
+          <div key={index} className="bg-gray-800 p-2 rounded-lg shadow-lg">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
+              className="w-full h-60 object-cover rounded-lg mb-4"
             />
             <h2 className="text-xl font-semibold text-gray-200">
               {project.title}
@@ -73,7 +73,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="text-purple-400 hover:underline"
               >
-                Demo
+                Live Demo
               </a>
             </div>
           </div>
