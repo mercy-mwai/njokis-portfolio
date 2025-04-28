@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import { useState } from "react";
+import Footer from "@/components/Footer";
 
 
 const Contact = () => {
@@ -111,6 +112,7 @@ const Contact = () => {
 
         </div>
       </div>
+      <Footer />
     </Banner>
   );
 };
