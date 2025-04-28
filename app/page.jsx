@@ -8,13 +8,11 @@ import Projects from "./projects/page";
 import Banner from "@/components/Banner";
 import SkillSection from "./skills/page";
 
-
 const Home = () => {
   return (
     <Banner>
       {/* Nav */}
       <Nav />
-
       {/* Content */}
       <div className="relative z-20 text-white pt-20 sm:pt-24 md:pt-32 lg:pt-60 px-6 sm:px-10 md:px-20">
         <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
@@ -42,19 +40,8 @@ const Home = () => {
             delaySpeed={1000}
           />
         </p>
-        
       </div>
-      {/*AboutSection*/}
       <AboutSection />
-
-      {/* Skills Section */}
-      <SkillSection />
-      {/* Projects Section */}
-      <Projects />
-      {/* Contact Section */}
-      <Contact />
-      {/* Footer */}
-     <Footer />
     </Banner>
   );
 };

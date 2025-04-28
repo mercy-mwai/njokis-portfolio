@@ -2,11 +2,13 @@
 import Banner from "@/components/Banner";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+import SkillSection from "../skills/page";
 
 const AboutSection = () => {
   return (
     <Banner
-      className="bg-black/10 text-white px-6 py-16 md:px-20 mt-60"
+      className="bg-black/10 text-white px-6 py-16 md:px-20
+"
       id="about"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
@@ -52,7 +54,7 @@ const AboutSection = () => {
           </Tilt>
         </div>
       </div>
-   
+    <SkillSection />
     </Banner>
   );
 };

@@ -81,7 +81,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-     
+     <Contact />
       
     </Banner>
   );

@@ -1,8 +1,7 @@
 import Banner from '@/components/Banner'
 import Image from 'next/image'
 import Projects from '../projects/page';
-import Contact from '../contact/page';
-import Footer from '@/components/Footer';
+
 
 
 const skills = [
@@ -50,9 +49,9 @@ const skills = [
 
 const SkillSection = () => {
   return (
-    <Banner className="bg-black/10 text-white px-6 py-20  md:px-20">
+    <Banner className="bg-black/10 text-white px-6 py-20  md:px-20 ">
       <div>
-        <h1 className="text-center text-white pt-20  text-3xl font-bold">
+        <h1 className="text-center text-white pt-20 text-3xl font-bold">
           PROFESSIONAL SKILLSET
         </h1>
         
@@ -83,8 +82,7 @@ const SkillSection = () => {
           ))}
         </div>
       </div>
-     
-     
+        <Projects />
     </Banner>
   );
 };
