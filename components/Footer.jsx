@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -26,6 +26,9 @@ const Footer = () => {
           </a>
           <a href="/" className="hover:text-purple-400 transition duration-300">
             <FaEnvelope size={22} />
+          </a>
+          <a href="/" className="hover:text-purple-400 transition duration-300">
+            <FaArrowUp size={22} />
           </a>
         </div>
 
