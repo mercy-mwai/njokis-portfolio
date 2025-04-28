@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import React from "react";
 import Contact from '../contact/page';
-import Footer from '@/components/Footer';
+
 
 const Projects = () => {
   const projects = [

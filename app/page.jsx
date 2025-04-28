@@ -1,14 +1,16 @@
 "use client";
 import { Typewriter } from "react-simple-typewriter";
-import Footer from "@/components/Footer";
 import Nav from "@/components/Navbar";
 import AboutSection from "./about/page";
-import Contact from "./contact/page";
-import Projects from "./projects/page";
 import Banner from "@/components/Banner";
-import SkillSection from "./skills/page";
+import { useRouter } from "next/navigation";
+
 
 const Home = () => {
+const router = useRouter();
+  const handleClick = () => {
+    router.push("/contact");
+  };
   return (
     <Banner>
       {/* Nav */}
@@ -40,6 +42,43 @@ const Home = () => {
             delaySpeed={1000}
           />
         </p>
+        <div className=" mx-auto flex flex-col md:flex-row  items-start gap-10 ml-10 mt-7">
+        <button
+          onClick={handleClick}
+          className="
+      relative overflow-hidden group
+       text-white font-medium
+        px-3 py-3 mt-4
+         rounded-full
+        bg-gradient-to-r from-purple-500 to-indigo-600
+        shadow-lg
+        transition-transform duration-300
+        hover:scale-105
+  "
+        >
+          <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
+          <span className="relative z-10">Contact Me</span>
+        </button>
+
+        <button
+          onClick={()=>router.push("/projects")}
+          className="
+      relative overflow-hidden group
+       text-white font-medium
+        px-3 py-3 mt-4
+         rounded-full
+        bg-gradient-to-r from-purple-500 to-indigo-600
+        shadow-lg
+        transition-transform duration-300
+        hover:scale-105
+  "
+        >
+          <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
+          <span className="relative z-10">View My Work</span>
+        </button>
+
+        </div>
+        
       </div>
       <AboutSection />
     </Banner>

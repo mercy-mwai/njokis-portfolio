@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Projects from '../projects/page';
 
 
-
 const skills = [
   {
     category: "Programming Languages",
