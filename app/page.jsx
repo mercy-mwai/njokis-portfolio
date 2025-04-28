@@ -5,9 +5,8 @@ import AboutSection from "./about/page";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/navigation";
 
-
 const Home = () => {
-const router = useRouter();
+  const router = useRouter();
   const handleClick = () => {
     router.push("/contact");
   };
@@ -43,9 +42,9 @@ const router = useRouter();
           />
         </p>
         <div className=" mx-auto flex flex-col md:flex-row  items-start gap-10 ml-10 mt-7">
-        <button
-          onClick={handleClick}
-          className="
+          <button
+            onClick={handleClick}
+            className="
       relative overflow-hidden group
        text-white font-medium
         px-3 py-3 mt-4
@@ -55,14 +54,14 @@ const router = useRouter();
         transition-transform duration-300
         hover:scale-105
   "
-        >
-          <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
-          <span className="relative z-10">Contact Me</span>
-        </button>
+          >
+            <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
+            <span className="relative z-10">Contact Me</span>
+          </button>
 
-        <button
-          onClick={()=>router.push("/projects")}
-          className="
+          <button
+            onClick={() => router.push("/projects")}
+            className="
       relative overflow-hidden group
        text-white font-medium
         px-3 py-3 mt-4
@@ -72,13 +71,20 @@ const router = useRouter();
         transition-transform duration-300
         hover:scale-105
   "
-        >
-          <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
-          <span className="relative z-10">View My Work</span>
-        </button>
+          >
+            <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full" />
+            <span className="relative z-10">View My Work</span>
+          </button>
 
+          <a
+            href="/Njoki.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-purple-500 text-white px-3 py-3 mt-4 rounded-md hover:bg-purple-600 transition duration-300"
+          >
+            Download Resume
+          </a>
         </div>
-        
       </div>
       <AboutSection />
     </Banner>
