@@ -82,7 +82,7 @@ const Home = () => {
             rel="noopener noreferrer"
             className="bg-purple-500 text-white px-3 py-3 mt-4 rounded-md hover:bg-purple-600 transition duration-300"
           >
-            Download Resume
+            View Resume
           </a>
         </div>
       </div>

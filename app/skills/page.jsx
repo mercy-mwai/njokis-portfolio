@@ -26,7 +26,7 @@ const skills = [
     items: [
       { src: "/assets/icons/node-js.svg", alt: "Node.js" },
       { src: "/assets/icons/Express JS.svg", alt: "Express.js" },
-      { src: "/assets/icons/restapi.png", alt: "REST API" },
+      { src: "/assets/icons/restapi.svg", alt: "REST API" },
     ],
   },
   {

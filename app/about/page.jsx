@@ -45,7 +45,7 @@ const AboutSection = () => {
         <div className="md:w-1/3 flex justify-center md:justify-end md:mt-50">
           <Tilt>
             <Image
-              src="/assets/images/Njoki.jpeg"
+              src="/assets/images/Njokii.jpeg"
               width={250}
               height={250}
               alt="Njoki"
