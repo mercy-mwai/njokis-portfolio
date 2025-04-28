@@ -112,7 +112,7 @@ const Contact = () => {
 
         </div>
       </div>
-      <Footer />
+     
     </Banner>
   );
 };

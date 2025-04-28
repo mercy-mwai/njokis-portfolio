@@ -81,8 +81,8 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <Contact />
-      <Footer />
+     
+      
     </Banner>
   );
 };

@@ -83,9 +83,8 @@ const SkillSection = () => {
           ))}
         </div>
       </div>
-      <Projects />
-      <Contact />
-      <Footer />
+     
+     
     </Banner>
   );
 };

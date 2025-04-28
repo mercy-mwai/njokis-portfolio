@@ -1,11 +1,7 @@
 "use client";
 import Banner from "@/components/Banner";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
-import SkillSection from "../skills/page";
-import Projects from "../projects/page";
-import Contact from "../contact/page";
 
 const AboutSection = () => {
   return (
@@ -56,10 +52,7 @@ const AboutSection = () => {
           </Tilt>
         </div>
       </div>
-    <SkillSection />
-    <Projects />
-    <Contact />
-    <Footer />
+   
     </Banner>
   );
 };
