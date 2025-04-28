@@ -42,7 +42,7 @@ const Projects = () => {
 
   return (
     <Banner className="py-20">
-      <h1 className="font-bold text-4xl pt-30 text-gray-300 text-center hover:text-amber-400">
+      <h1 className="font-bold text-4xl pt-20 text-gray-300 text-center hover:text-amber-400">
         A SMALL SECTION OF {""}
         <span className="text-purple-400 text-4xl">MY RECENT PROJECTS</span>
       </h1>

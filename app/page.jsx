@@ -6,6 +6,7 @@ import AboutSection from "./about/page";
 import Contact from "./contact/page";
 import Projects from "./projects/page";
 import Banner from "@/components/Banner";
+import SkillSection from "./skills/page";
 
 
 const Home = () => {
@@ -46,6 +47,8 @@ const Home = () => {
       {/*AboutSection*/}
       <AboutSection />
 
+      {/* Skills Section */}
+      <SkillSection />
       {/* Projects Section */}
       <Projects />
       {/* Contact Section */}
