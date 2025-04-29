@@ -54,9 +54,14 @@ const Home = () => {
             👋🏽
           </motion.span>
         </h1>
-        <h1 className="text-[2.5em] pl-14">
+        <motion.h1 
+        className="text-[2.5em] pl-14"
+        initial={{y: -20, opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        transition={{duration:0.6, delay:0.3}}
+        >
           I'M <strong className="text-purple-300">NJOKI MWAI</strong>
-        </h1>
+        </motion.h1>
         <p className="mt-4 text-[2.0em] text-left pl-14 text-purple-300">
           <Typewriter
             words={[
