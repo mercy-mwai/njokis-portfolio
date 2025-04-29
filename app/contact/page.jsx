@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import { useState } from "react";
+import { motion } from "motion/react"
 import Footer from "@/components/Footer";
 
 
@@ -23,9 +24,13 @@ const Contact = () => {
   };
   return (
     <Banner className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center pt-20">
+      <motion.h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center pt-20"
+      initial={{scale:0}}
+      whileInView={{scale:1}}
+      transition={{duration:0.8}}
+      >
         <span className="text-purple-400 ">Get in Touch</span>
-      </h1>
+      </motion.h1>
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
         {/* Left: Contact Info */}

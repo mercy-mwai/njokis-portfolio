@@ -4,8 +4,20 @@ import Nav from "@/components/Navbar";
 import AboutSection from "./about/page";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/navigation";
+import { motion } from "motion/react"
 
 const Home = () => {
+  const handAnimation = {
+    shake: {
+      rotate: [ -10, 10, -10, 10, -5, 5, 0 ],
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+        repeat: 3, // How many times to repeat
+      },
+    },
+  };
+
   const router = useRouter();
   const handleClick = () => {
     router.push("/contact");
@@ -16,11 +28,17 @@ const Home = () => {
       <Nav />
       {/* Content */}
       <div className="relative z-20 text-white pt-20 sm:pt-24 md:pt-32 lg:pt-60 px-6 sm:px-10 md:px-20">
-        <h1 className="text-[2.4em] font-bold mb-6 text-left pl-14">
+        <h1 
+        className="text-[2.4em] font-bold mb-6 text-left pl-14"
+        >
           Hi there{" "}
-          <span role="img" aria-label="waving hand">
+          <motion.span 
+          role="img" 
+          aria-label="waving hand"  
+          variants={handAnimation}
+          whileHover="shake">
             👋🏽
-          </span>
+          </motion.span>
         </h1>
         <h1 className="text-[2.5em] pl-14">
           I'M <strong className="text-purple-300">NJOKI MWAI</strong>

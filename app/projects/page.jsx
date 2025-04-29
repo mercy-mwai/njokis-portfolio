@@ -1,6 +1,8 @@
+"use client";
 import Banner from "@/components/Banner";
 import React from "react";
 import Contact from '../contact/page';
+import { motion } from 'framer-motion';
 
 
 const Projects = () => {
@@ -44,10 +46,15 @@ const Projects = () => {
 
   return (
     <Banner className="py-20">
-      <h1 className="font-bold text-4xl pt-20 text-gray-300 text-center hover:text-amber-400">
+      <motion.h1 
+      className="font-bold text-4xl pt-20 text-gray-300 text-center hover:text-amber-400"
+      initial={{ opacity: 0, y: 20 }} 
+      animate={{ opacity: 1, y: 0 }}   
+      transition={{ duration: 0.5, ease: "easeInOut" }} 
+      >
         A SMALL SECTION OF {""}
         <span className="text-purple-400 text-4xl">MY RECENT PROJECTS</span>
-      </h1>
+      </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
         {projects.map((project, index) => (
           <div key={index} className="bg-gray-800 p-2 rounded-lg shadow-lg">

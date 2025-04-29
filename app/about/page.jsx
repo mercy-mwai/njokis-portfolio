@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+import { motion } from "motion/react"
 import SkillSection from "../skills/page";
 
 const AboutSection = () => {
@@ -44,6 +45,11 @@ const AboutSection = () => {
         {/* Image Banner */}
         <div className="md:w-1/3 flex justify-center md:justify-end md:mt-50">
           <Tilt>
+            <motion.div
+            initial={{scale:0}}
+            whileInView={{scale:1}}
+            transition={{duration:0.8}}
+            >
             <Image
               src="/assets/images/Njokii.jpeg"
               width={250}
@@ -51,6 +57,8 @@ const AboutSection = () => {
               alt="Njoki"
               className="rounded-full border-4 border-purple-500 shadow-lg"
             />
+            </motion.div>
+            
           </Tilt>
         </div>
       </div>
