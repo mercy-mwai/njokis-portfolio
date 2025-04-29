@@ -58,7 +58,7 @@ const Home = () => {
         className="text-[2.5em] pl-14"
         initial={{y: -20, opacity:0}}
         whileInView={{y:0, opacity:1}}
-        transition={{duration:0.6, delay:0.3}}
+        transition={{duration:0.6}}
         >
           I'M <strong className="text-purple-300">NJOKI MWAI</strong>
         </motion.h1>

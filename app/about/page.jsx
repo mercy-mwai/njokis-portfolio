@@ -15,9 +15,14 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         {/* Text Banner */}
         <div className="w-full md:w-2/3 mt-20 md:mt-40 text-center md:text-left px-2 sm:px-6">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
+          <motion.h1 
+          className="text-3xl sm:text-4xl font-bold mb-4 text-white"
+          initial={{y: -20, opacity:0}}
+          whileInView={{y:0, opacity:1}}
+          transition={{duration:0.6}}
+          >
             LET ME <span className="text-purple-400">INTRODUCE</span> MYSELF
-          </h1>
+          </motion.h1>
           <p className="text-base sm:text-lg leading-relaxed mb-4 text-white">
             Hey there! I'm Njoki Mwai, a dedicated{" "}
             <strong>Full-Stack Developer</strong> who enjoys building strong and
@@ -48,7 +53,7 @@ const AboutSection = () => {
             <motion.div
             initial={{scale:0}}
             whileInView={{scale:1}}
-            transition={{duration:0.8}}
+            transition={{duration:0.5}}
             >
             <Image
               src="/assets/images/Njokii.jpeg"
