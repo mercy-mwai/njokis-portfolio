@@ -4,19 +4,31 @@ import Nav from "@/components/Navbar";
 import AboutSection from "./about/page";
 import Banner from "@/components/Banner";
 import { useRouter } from "next/navigation";
-import { motion } from "motion/react"
+import { motion, useAnimation } from "motion/react"
+import { useEffect, useRef } from "react";
 
 const Home = () => {
-  const handAnimation = {
-    shake: {
-      rotate: [ -10, 10, -10, 10, -5, 5, 0 ],
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-        repeat: 3, // How many times to repeat
-      },
-    },
-  };
+  const controls = useAnimation();
+  const sequence = useRef([
+    [ "rotate", 15, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", -15, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", 10, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", -10, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", 5, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", -5, { duration: 0.2, ease: "easeInOut" } ],
+    [ "rotate", 0, { duration: 0.2, ease: "easeInOut" } ],
+  ]).current;
+
+  useEffect(() => {
+    const doAnimation = async () => {
+      for (const [key, value, options] of sequence) {
+        await controls.start({ [key]: value, ...options });
+      }
+    };
+
+    doAnimation();
+  }, [controls, sequence]);
+
 
   const router = useRouter();
   const handleClick = () => {
@@ -34,9 +46,11 @@ const Home = () => {
           Hi there{" "}
           <motion.span 
           role="img" 
+          className="inline-block"
           aria-label="waving hand"  
-          variants={handAnimation}
-          whileHover="shake">
+          animate={controls}
+          
+          >
             👋🏽
           </motion.span>
         </h1>
