@@ -166,7 +166,7 @@ const ContactLink = ({ href, icon, label, newTab }) => (
     href={href}
     target={newTab ? "_blank" : "_self"}
     rel={newTab ? "noopener noreferrer" : undefined}
-    className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-md px-4 py-2 hover:bg-purple-400 hover:text-black transition duration-300"
+    className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-md px-3 py-2 hover:bg-purple-400 hover:text-black transition duration-300"
   >
     {icon}
     <span className="text-lg">{label}</span>
