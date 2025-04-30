@@ -40,7 +40,7 @@ const Contact = () => {
   
       if (response.ok) {
         console.log('Message sent!');
-        // Optionally reset the form or show success feedback
+        setFormData({ name: '', email: '', content: '' });
       } else {
         console.error('Failed to send message');
       }
