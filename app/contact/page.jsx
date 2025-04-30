@@ -14,14 +14,39 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    content: ''
+  });
+  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setShowPopup(true);
     setTimeout(() => {
       setShowPopup(false);
     }, 3000); 
+
+      const response = await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          content,
+        }),
+      });
+  
+      if (response.ok) {
+        console.log('Message sent!');
+        // Optionally reset the form or show success feedback
+      } else {
+        console.error('Failed to send message');
+      }
+    
   };
+
   return (
     <Banner className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10">
       <motion.h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center pt-20"
@@ -88,15 +113,27 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             />
             <input
               type="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             />
             <textarea
               placeholder="Your Message"
+              value={formData.content}
+              onChange={(e) =>
+                setFormData({ ...formData, content: e.target.value })
+              }
               rows={4}
               className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all"
             />
