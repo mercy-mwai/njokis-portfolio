@@ -44,7 +44,6 @@ const Contact = () => {
       } else {
         console.error('Failed to send message');
       }
-    
   };
 
   return (
