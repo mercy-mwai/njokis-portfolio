@@ -5,6 +5,7 @@ const prisma = new PrismaClient();
 
 export async function POST(request){
     const {name, email, content}=await request.json();
+    console.log("Received data:", data);
     if(!name || !email || !content){
         return new Response('Missing fields', {status: 400});
     }
