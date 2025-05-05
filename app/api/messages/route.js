@@ -1,5 +1,5 @@
+export const runtime = 'nodejs';
 import { prisma} from '@/app/utils/prisma';
-
 
 export async function POST(request){
     const {name, email, content}=await request.json();
