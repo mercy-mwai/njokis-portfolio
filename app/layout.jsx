@@ -2,7 +2,6 @@ import Nav from "@/components/Navbar";
 import "../styles/globals.css";
 
 
-
 export const metadata = {
   title: "Njoki's Portfolio",
   description: "Welcome to my portfolio!",
