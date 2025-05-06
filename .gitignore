@@ -45,5 +45,4 @@ next-env.d.ts
 
 .vercel
 
-prisma-client
-.vercel
+
