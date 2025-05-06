@@ -35,6 +35,7 @@ const skills = [
       { src: "/assets/icons/mongodb.svg", alt: "MongoDB" },
       { src: "/assets/icons/mysql.svg", alt: "MySQL" },
       { src: "/assets/icons/firebase.svg", alt: "Firebase" },
+      { src: "/assets/icons/postgresql.svg", alt: "PostgreSQL" },
     ],
   },
   {

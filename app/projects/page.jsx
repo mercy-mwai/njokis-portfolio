@@ -9,7 +9,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Portfolio Website",
-      description: "A personal portfolio built with Next.js and Tailwind CSS.",
+      description: "A personal portfolio built with Next.js,Tailwind CSS and PostgreSQL.",
       image: "/assets/images/NjokiP.png",
       github: "https://github.com/mercy-mwai/njoki-portfolio",
       demo: "https://njoki-portfolio.vercel.app/",
