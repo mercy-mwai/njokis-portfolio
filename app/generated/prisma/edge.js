@@ -162,8 +162,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../app/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Message {\n  id        Int      @id @default(autoincrement())\n  name      String\n  email     String\n  content   String\n  createdAt DateTime @default(now())\n}\n",
-  "inlineSchemaHash": "13d34cbfaf682da3709b82a7c0092ea9a029bfc276d5ec44a26884bf1e615649",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../app/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Message {\n  id        Int      @id @default(autoincrement())\n  name      String\n  email     String\n  content   String\n  createdAt DateTime @default(now())\n}\n",
+  "inlineSchemaHash": "3b385aa112e2dbbb75cb3d309fe71d39cfa83b06bfae3127007e3e0f64168da8",
   "copyEngine": true
 }
 config.dirname = '/'
