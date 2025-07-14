@@ -56,7 +56,7 @@ const AboutSection = () => {
             transition={{duration:0.5}}
             >
             <Image
-              src="/assets/images/Njokii.jpeg"
+              src="/assets/images/Njoki.jpeg"
               width={250}
               height={250}
               alt="Njoki"
