@@ -32,9 +32,9 @@ const AboutSection = () => {
             <strong>React and Next.js</strong> to robust backends with
             <span className="text-purple-400 font-semibold">
               {" "}
-              Node.js, Express, MongoDB,PostgreSQL and MySQL
+              Node.js, Express, MongoDB,PostgreSQL and MySQL.
             </span>
-            .
+             Currently learning backend with <span className="text-purple-400 font-semibold">PHP.</span> 
             <br />
             <br />
             I'm skilled in <strong>Git & GitHub</strong> for collaboration and
