@@ -1,4 +1,4 @@
-import Nav from "@/components/Navbar";
+
 import "../styles/globals.css";
 
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Nav />
+      
         <main className="flex-grow">
         {children}
         </main>
