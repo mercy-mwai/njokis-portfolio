@@ -318,7 +318,7 @@ const Home = () => {
         </motion.nav>
       )}
 
-      {/* Scroll to Top Arrow - Only show when scrolled past home */}
+      
       {showNavbar && (
         <motion.button
           initial={{ scale: 0, opacity: 0 }}
@@ -333,7 +333,7 @@ const Home = () => {
         </motion.button>
       )}
 
-      {/* Home Section */}
+      {/* Home */}
       <section
         id="home"
         className="relative z-20 text-white pt-20 sm:pt-24 md:pt-32 lg:pt-60 px-6 sm:px-10 md:px-20 min-h-screen flex flex-col justify-center"
@@ -399,7 +399,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About*/}
       <section
         id="about"
         className="bg-black/10 text-white px-6 py-16 md:px-20"
@@ -462,7 +462,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Skills*/}
       <section
         id="skills"
         className="bg-black/10 text-white px-6 py-20 md:px-20"
@@ -501,7 +501,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects*/}
       <section id="projects" className="py-20">
         <motion.h1
           className="font-bold text-4xl pt-20 text-gray-300 text-center hover:text-amber-400"
@@ -547,7 +547,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact */}
       <section
         id="contact"
         className="bg-black/10 text-white px-6 py-16 md:px-20 mt-10 relative"
@@ -604,7 +604,7 @@ const Home = () => {
               />
             </div>
           </div>
-          {/* Right: Contact Form */}
+          {/* Right*/}
           <div className="w-full md:w-1/2 space-y-8">
             <h2 className="text-3xl font-bold text-purple-400 mb-4">
               Send me a message
