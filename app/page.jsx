@@ -51,8 +51,6 @@ const Home = () => {
     {
       category: "Frontend Development",
       items: [
-        { src: "/assets/icons/html.svg", alt: "HTML" },
-        { src: "/assets/icons/css.svg", alt: "CSS" },
         { src: "/assets/icons/tailwind.svg", alt: "Tailwind CSS" },
         { src: "/assets/icons/react.svg", alt: "React" },
         { src: "/assets/icons/nextjs.svg", alt: "Next.js" },
@@ -62,7 +60,7 @@ const Home = () => {
       category: "Backend Development",
       items: [
         { src: "/assets/icons/node-js.svg", alt: "Node.js" },
-        { src: "/assets/icons/Express JS.svg", alt: "Express.js" },
+        { src: "/assets/icons/Laravel.png", alt: "Laravel" },
         { src: "/assets/icons/restapi.svg", alt: "REST API" },
       ],
     },
@@ -318,7 +316,6 @@ const Home = () => {
         </motion.nav>
       )}
 
-      
       {showNavbar && (
         <motion.button
           initial={{ scale: 0, opacity: 0 }}
@@ -414,7 +411,7 @@ const Home = () => {
             >
               About <span className="text-purple-400">Me</span>
             </motion.h1>
-            <p className="text-base sm:text-lg leading-relaxed mb-4 text-white">
+            {/* <p className="text-base sm:text-lg leading-relaxed mb-4 text-white">
               Hey there! I'm Njoki Mwai, a dedicated{" "}
               <strong>Software Developer</strong> focused on building efficient,
               scalable backend systems and intuitive full-stack applications.
@@ -438,6 +435,39 @@ const Home = () => {
               <br />I love <strong>solving real-world problems</strong> with
               clean, scalable code and enjoy working in teams that push me to
               grow and build better.
+            </p> */}
+            <p className="text-base sm:text-lg leading-relaxed mb-4 text-white">
+              Hey there! I'm <span className="font-semibold">Njoki Mwai</span>,
+              a passionate <strong>PHP Backend Developer</strong> with a growing
+              focus on building scalable, secure, and efficient web
+              applications.
+              <br />
+              <br />I specialize in <strong>
+                Laravel and the LAMP stack
+              </strong>{" "}
+              for backend development and enjoy designing well-structured
+              databases with{" "}
+              <span className="text-purple-400 font-semibold">
+                MySQL and PostgreSQL
+              </span>
+              . On the frontend, I love crafting modern, responsive user
+              interfaces with{" "}
+              <span className="text-purple-400 font-semibold">
+                React and Next.js
+              </span>
+              .
+              <br />
+              <br />
+              I’m also skilled in <strong>Git & GitHub</strong> for version
+              control and use platforms like{" "}
+              <strong>Vercel, Netlify, and Render</strong> to bring projects to
+              life.
+              <br />
+              <br />
+              Beyond coding, I thrive on{" "}
+              <strong>solving real-world problems</strong> and collaborating
+              with teams to build solutions that are both impactful and
+              user-friendly.
             </p>
           </div>
 
@@ -586,7 +616,7 @@ const Home = () => {
                 newTab
               />
               <ContactLink
-                href="https://www.linkedin.com/in/mercy-mwai-aa7214279/"
+                href="https://www.linkedin.com/in/njoki-m-mwai-aa7214279/"
                 icon={<FaLinkedin />}
                 label="Njoki Mwai"
                 newTab
