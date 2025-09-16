@@ -480,9 +480,9 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  src="/assets/images/Njoki.jpeg"
-                  width={250}
-                  height={250}
+                  src="/assets/images/love.jpeg"
+                  width={500}
+                  height={500}
                   alt="Njoki"
                   className="rounded-full border-4 border-purple-500 shadow-lg"
                 />
