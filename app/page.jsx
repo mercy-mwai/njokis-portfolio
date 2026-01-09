@@ -86,7 +86,7 @@ export default function Portfolio() {
       title: "Private Journaling",
       description:
         "Private Journaling for study planner and journaling using Next Js & Laravel",
-      image: "",
+      image: "/assets/images/diary.png",
       tags: [ "Next.js", "PostgreSQL", "Laravel"],
       github: "https://github.com/mercy-mwai/PrivateJournaling",
       link: "#",
